@@ -1,6 +1,6 @@
 FROM ubuntu:22.04
 RUN apt update && apt install python3 -y && apt install python3-flask -y
 RUN touch testfile
-COPy app.py /tmp
+COPY app.py /tmp
 EXPOSE 8080
 CMD ["python3","/tmp/app.py"]
